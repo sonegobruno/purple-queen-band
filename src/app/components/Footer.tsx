@@ -1,4 +1,10 @@
-import { Instagram, Mail, Phone } from 'lucide-react'
+'use client'
+import {
+  InstagramLogo,
+  Phone,
+  EnvelopeSimple,
+  WhatsappLogo,
+} from '@phosphor-icons/react'
 import { LinkIcon } from './LinkIcon'
 
 export function Footer() {
@@ -14,11 +20,32 @@ export function Footer() {
         <nav className="flex items-center gap-2 mt-1">
           <LinkIcon
             href="https://www.instagram.com/purplequeenband"
-            icon={Instagram}
+            icon={InstagramLogo}
+            iconConfig={{
+              weight: 'bold',
+            }}
           />
-
-          <LinkIcon href="mailto:purplequeenband@gmail.com" icon={Mail} />
-          <LinkIcon href="tel:35984396313" icon={Phone} />
+          <LinkIcon
+            href="https://wa.me/5535984396313"
+            icon={WhatsappLogo}
+            iconConfig={{
+              weight: 'bold',
+            }}
+          />
+          <LinkIcon
+            href="mailto:purplequeenband@gmail.com"
+            icon={EnvelopeSimple}
+            iconConfig={{
+              weight: 'bold',
+            }}
+          />
+          <LinkIcon
+            href="tel:35984396313"
+            icon={Phone}
+            iconConfig={{
+              weight: 'bold',
+            }}
+          />
         </nav>
       </div>
       <div className="made-by mt-8">

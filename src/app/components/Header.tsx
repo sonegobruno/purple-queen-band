@@ -1,4 +1,10 @@
-import { Instagram, Mail, Phone } from 'lucide-react'
+'use client'
+import {
+  EnvelopeSimple,
+  InstagramLogo,
+  Phone,
+  WhatsappLogo,
+} from '@phosphor-icons/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { LinkButton } from './LinkButton'
@@ -23,13 +29,28 @@ export function Header() {
         <LinkButton href="contact">Contato para shows</LinkButton>
       </nav>
 
-      <nav className="space-x-2 flex items-center">
+      <nav className="gap flex items-center">
         <LinkIcon
           href="https://www.instagram.com/purplequeenband"
-          icon={Instagram}
+          icon={InstagramLogo}
+          iconConfig={{
+            weight: 'bold',
+          }}
         />
-
-        <LinkIcon href="mailto:purplequeenband@gmail.com" icon={Mail} />
+        <LinkIcon
+          href="https://wa.me/5535984396313"
+          icon={WhatsappLogo}
+          iconConfig={{
+            weight: 'bold',
+          }}
+        />
+        <LinkIcon
+          href="mailto:purplequeenband@gmail.com"
+          icon={EnvelopeSimple}
+          iconConfig={{
+            weight: 'bold',
+          }}
+        />
         <LinkIcon href="tel:35984396313" icon={Phone} />
       </nav>
     </header>
