@@ -23,7 +23,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={twMerge(robotoSlab.className, 'bg-dark text-light')}>
+      <body
+        className={twMerge(
+          robotoSlab.className,
+          'bg-dark text-light h-screen max-w-[100vw]',
+        )}
+      >
         <Header />
         {children}
         <Footer />

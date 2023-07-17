@@ -12,24 +12,23 @@ import { LinkIcon } from './LinkIcon'
 
 export function Header() {
   return (
-    <header className="h-[80px] p-4 space-x-12 flex justify-center items-center">
-      <Link href="/" tabIndex={-1}>
-        <Image
-          src="/logo.svg"
-          alt="Logo da banda Purple Queen"
-          width={72}
-          height={56}
-        />
+    <header className="h-[80px] p-4 space-x-12 flex md:justify-center items-center">
+      <Link
+        href="/"
+        tabIndex={-1}
+        className="relative w-[56px] h-[40px] md:w-[72px] md:h-[56px]"
+      >
+        <Image src="/logo.svg" alt="Logo da banda Purple Queen" layout="fill" />
       </Link>
 
-      <nav className="space-x-3 flex items-center">
+      <nav className="hidden md:flex gap-3 items-center">
         <LinkButton href="/">Início</LinkButton>
         <LinkButton href="/about">Sobre a banda</LinkButton>
         <LinkButton href="/schedule">Agenda</LinkButton>
         <LinkButton href="contact">Contato para shows</LinkButton>
       </nav>
 
-      <nav className="gap flex items-center">
+      <nav className="hidden md:flex gap items-center">
         <LinkIcon
           href="https://www.instagram.com/purplequeenband"
           icon={InstagramLogo}
