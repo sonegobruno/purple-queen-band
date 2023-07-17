@@ -6,7 +6,7 @@ import { LinkIcon } from './LinkIcon'
 
 export function Header() {
   return (
-    <header className="p-4 space-x-12 flex justify-center items-center">
+    <header className="h-[80px] p-4 space-x-12 flex justify-center items-center">
       <Link href="/" tabIndex={-1}>
         <Image
           src="/logo.svg"
