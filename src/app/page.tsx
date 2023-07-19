@@ -1,7 +1,7 @@
 'use client'
 import { Guitar } from '@phosphor-icons/react'
 import Link from 'next/link'
-import { Button } from './components/Button'
+import { Button } from '../components/Button'
 
 export default function Home() {
   return (

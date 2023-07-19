@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 // eslint-disable-next-line camelcase
 import { Roboto_Slab } from 'next/font/google'
 import { twMerge } from 'tailwind-merge'
-import { Header } from './components/Header'
-import { Footer } from './components/Footer'
+import { Header } from '../components/Header'
+import { Footer } from '../components/Footer'
 
 const robotoSlab = Roboto_Slab({ subsets: ['latin'] })
 
