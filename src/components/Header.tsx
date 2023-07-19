@@ -9,10 +9,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { LinkButton } from './LinkButton'
 import { LinkIcon } from './LinkIcon'
+import { SidebarMenu } from './SidebarMenu'
 
 export function Header() {
   return (
-    <header className="h-[80px] p-4 space-x-12 flex md:justify-center items-center">
+    <header className="h-[80px] p-4 space-x-12 flex justify-between md:justify-center items-center">
+      <SidebarMenu />
+
       <Link
         href="/"
         tabIndex={-1}

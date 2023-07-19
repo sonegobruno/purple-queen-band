@@ -11,6 +11,7 @@ module.exports = {
         primary: '#8C52FF',
         light: '#F4F4EF',
         dark: '#0C0014',
+        'dark-tiny': '#1A0F21',
       },
       boxShadow: {
         primary: '0px 0px 20px -1px rgba(73, 28, 163, 0.3)',
