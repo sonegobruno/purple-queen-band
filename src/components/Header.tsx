@@ -21,7 +21,7 @@ export function Header() {
         tabIndex={-1}
         className="relative w-[56px] h-[40px] md:w-[72px] md:h-[56px]"
       >
-        <Image src="/logo.svg" alt="Logo da banda Purple Queen" layout="fill" />
+        <Image src="/logo.svg" alt="Logo da banda Purple Queen" fill />
       </Link>
 
       <nav className="hidden md:flex gap-3 items-center">

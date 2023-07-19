@@ -5,3 +5,19 @@
 *:focus {
     outline: none;
 }
+
+.background-image {
+    position: fixed;
+    inset: 0;
+    opacity: 0.25;
+    background-image: url('/background-one.png');
+    background-position: top center;
+    background-size: cover;
+    z-index: -900;
+}
+
+@media (max-width: 769px) {
+    .background-image {
+        background-image: url('/background-two.png');
+    }
+}

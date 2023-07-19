@@ -5,14 +5,14 @@ import { List, X } from '@phosphor-icons/react'
 export function SidebarMenu() {
   return (
     <Dialog.Root>
-      <Dialog.Trigger className="md:hidden">
-        <Button variant="ghost">
+      <Button variant="ghost">
+        <Dialog.Trigger className="md:hidden" asChild>
           <List size={24} />
-        </Button>
-      </Dialog.Trigger>
+        </Dialog.Trigger>
+      </Button>
       <Dialog.Portal className="bg-black/60 inset-0 fixed">
         <Dialog.Overlay />
-        <Dialog.Content className="bg-dark-tiny py-4 px-5 md:py-8 md:px-10 w-[80%] md:w-[30%] h-full overflow-y-auto fixed top-0 botton-0 right-0 shadow-lg shadow-light/25">
+        <Dialog.Content className="bg-dark-tiny py-4 px-5 md:py-8 md:px-10 w-[80%] md:w-[30%] h-full overflow-y-auto fixed top-0 botton-0 left-0 shadow-lg shadow-light/25">
           <header className="flex items-center justify-between">
             <Dialog.Title>Menu</Dialog.Title>
             <Dialog.Close>

@@ -29,7 +29,7 @@ export function LinkButton({ href, children }: Props) {
     <Link
       href={href}
       className={twMerge(
-        'transition-all shadow-md p-1 rounded-t-md border-b border-transparent focus:shadow-primary hover:text-primary hover:border-primary',
+        'transition-all text-center leading-tight shadow-md p-1 rounded-t-md border-b border-transparent focus:shadow-primary hover:text-primary hover:border-primary',
         statusStyle,
       )}
     >

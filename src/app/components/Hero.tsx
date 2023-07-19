@@ -1,7 +1,6 @@
 'use client'
+import { Anchor } from '@/components/Anchor'
 import { Guitar } from '@phosphor-icons/react'
-import Link from 'next/link'
-import { Button } from '../../components/Button'
 
 export function Hero() {
   return (
@@ -14,11 +13,9 @@ export function Hero() {
         <p className="text-sm  md:text-lg  mt-3 text-center">
           Uma experiência Rock n&apos; Roll única
         </p>
-        <Link href="contact" tabIndex={-1}>
-          <Button className="mt-4">
-            Nos chame para seu evento <Guitar weight="fill" />
-          </Button>
-        </Link>
+        <Anchor href="contact" className="mt-4">
+          Nos chame para seu evento <Guitar weight="fill" />
+        </Anchor>
       </div>
     </section>
   )
