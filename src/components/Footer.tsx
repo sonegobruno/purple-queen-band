@@ -9,7 +9,7 @@ import { LinkIcon } from './LinkIcon'
 
 export function Footer() {
   return (
-    <footer className="flex items-center flex-col py-8 px-4">
+    <footer className="flex bg-dark items-center flex-col py-8 px-4">
       <div className="schedule">
         <h2 className="text-center text-lg md:text-xl font-bold">
           Agendamento

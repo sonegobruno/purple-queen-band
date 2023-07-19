@@ -5,6 +5,7 @@ import { Roboto_Slab } from 'next/font/google'
 import { twMerge } from 'tailwind-merge'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
+import Image from 'next/image'
 
 const robotoSlab = Roboto_Slab({ subsets: ['latin'] })
 
@@ -26,12 +27,21 @@ export default function RootLayout({
       <body
         className={twMerge(
           robotoSlab.className,
-          'bg-dark text-light h-screen max-w-[100vw]',
+          'text-light h-screen max-w-[100vw] bg-dark overflow-hidden',
         )}
       >
-        <Header />
-        {children}
-        <Footer />
+        <Image
+          src="/background-one.png"
+          alt=""
+          layout="fill"
+          className="opacity-20 z-[-1]"
+        />
+
+        <div className="h-full w-full overflow-auto">
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   )

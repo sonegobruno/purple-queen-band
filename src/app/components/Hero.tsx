@@ -5,13 +5,13 @@ import { Button } from '../../components/Button'
 
 export function Hero() {
   return (
-    <section className="flex w-full h-full">
-      <div className="w-full h-full flex flex-col items-center md:items-start p-4 md:p-8">
-        <h1 className="text-2xl md:text-3xl font-bold leading-9 mt-4 md:mt-[25vh]">
-          Conheceça <br />
+    <section className="flex w-full h-[calc(100vh-80px)] container mx-auto">
+      <div className="w-full h-full flex flex-col items-center justify-center p-4 md:p-8">
+        <h1 className="text-2xl md:text-4xl font-bold leading-10 mt-4 text-center">
+          Conheça <br />
           nossa banda
         </h1>
-        <p className="text-sm  md:text-md  mt-3">
+        <p className="text-sm  md:text-lg  mt-3 text-center">
           Uma experiência Rock n&apos; Roll única
         </p>
         <Link href="contact" tabIndex={-1}>
@@ -20,7 +20,6 @@ export function Hero() {
           </Button>
         </Link>
       </div>
-      <div className="w-full h-full hidden md:block"></div>
     </section>
   )
 }
