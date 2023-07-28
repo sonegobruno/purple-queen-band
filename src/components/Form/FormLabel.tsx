@@ -5,5 +5,5 @@ interface Props {
 }
 
 export function FormLabel({ children }: Props) {
-  return <p className="text-sm">{children}</p>
+  return <p className="text-sm mb-2">{children}</p>
 }

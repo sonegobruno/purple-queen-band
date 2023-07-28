@@ -7,7 +7,7 @@ interface Props extends HTMLAttributes<HTMLLabelElement> {
 
 export function FormRoot({ children, className, ...rest }: Props) {
   return (
-    <label className={twMerge('space-y-2 inline-block', className)} {...rest}>
+    <label className={twMerge('inline-block', className)} {...rest}>
       {children}
     </label>
   )
