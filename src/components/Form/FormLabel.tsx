@@ -4,6 +4,6 @@ interface Props {
   children: ReactNode
 }
 
-export function InputLabel({ children }: Props) {
+export function FormLabel({ children }: Props) {
   return <p className="text-sm">{children}</p>
 }
