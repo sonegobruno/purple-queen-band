@@ -4,6 +4,7 @@ import { Form } from '@/components/Form'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
+import { api } from '@/services/api'
 
 const schema = z
   .object({
@@ -27,8 +28,12 @@ export function Contact() {
     resolver: zodResolver(schema),
   })
 
-  function onSubmit(data: FormValues) {
-    console.log(data)
+  async function onSubmit(data: FormValues) {
+    try {
+      await api.post('send-email', data)
+    } catch (error) {
+      console.error(error)
+    }
   }
 
   return (
