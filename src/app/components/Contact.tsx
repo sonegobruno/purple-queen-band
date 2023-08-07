@@ -27,8 +27,6 @@ export function Contact() {
     resolver: zodResolver(schema),
   })
 
-  console.log(errors)
-
   function onSubmit(data: FormValues) {
     console.log(data)
   }
