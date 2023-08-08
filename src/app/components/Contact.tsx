@@ -5,6 +5,8 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { api } from '@/app/services/api'
+import { errorHandler } from '@/errors/errorHandler'
+import { useState } from 'react'
 
 const schema = z
   .object({
@@ -28,11 +30,16 @@ export function Contact() {
     resolver: zodResolver(schema),
   })
 
+  const [isLoading, setIsLoading] = useState(false)
+
   async function onSubmit(data: FormValues) {
+    setIsLoading(true)
     try {
       await api.post('send-email', data)
     } catch (error) {
-      console.error(error)
+      errorHandler(error, 'send a email')
+    } finally {
+      setIsLoading(false)
     }
   }
 
@@ -77,7 +84,12 @@ export function Contact() {
             <Form.Footer message={errors.message?.message}></Form.Footer>
           </Form.Root>
 
-          <Button className="mt-5 mx-auto w-full max-w-[17rem]">Enviar</Button>
+          <Button
+            isLoading={isLoading}
+            className="mt-5 mx-auto w-full max-w-[17rem]"
+          >
+            Enviar
+          </Button>
         </form>
       </div>
     </section>

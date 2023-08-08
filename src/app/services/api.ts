@@ -1,3 +1,4 @@
+import { UNEXPECT_ERROR_MESSAGE } from '@/constants/errorMessage'
 import { FriendlyError } from '@/errors/FriendlyError'
 import axios, { AxiosError } from 'axios'
 
@@ -15,20 +16,13 @@ api.interceptors.response.use(
     ) {
       return Promise.reject(
         new FriendlyError(
-          error.response?.data?.message ??
-            'Houve um error inesperado. Por favor, entre em contato para estarmos verificando!',
+          error.response?.data?.message ?? UNEXPECT_ERROR_MESSAGE,
           error.response?.status,
           JSON.stringify(error),
         ),
       )
     } else {
-      return Promise.reject(
-        new FriendlyError(
-          'Houve um error inesperado. Por favor, entre em contato para estarmos verificando!',
-          500,
-          JSON.stringify(error),
-        ),
-      )
+      return Promise.reject(error)
     }
   },
 )

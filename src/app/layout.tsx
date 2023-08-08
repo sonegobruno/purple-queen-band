@@ -32,7 +32,6 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-
         <div className="background-image"></div>
       </body>
     </html>
