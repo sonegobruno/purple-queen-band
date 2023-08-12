@@ -4,7 +4,7 @@ import { Form } from '@/components/Form'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import { api } from '@/app/services/api'
+import { api } from '@/services/api'
 import { errorHandler } from '@/errors/errorHandler'
 import { useState } from 'react'
 

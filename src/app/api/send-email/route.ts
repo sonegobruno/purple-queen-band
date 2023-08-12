@@ -13,22 +13,21 @@ export async function POST(request: Request) {
 
   try {
     const transporter = nodemailer.createTransport({
-      host: 'smtp.forwardemail.net',
-      port: 465,
-      secure: true,
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false,
       auth: {
-        // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-        user: 'REPLACE-WITH-YOUR-ALIAS@YOURDOMAIN.COM',
-        pass: 'REPLACE-WITH-YOUR-GENERATED-PASSWORD',
+        user: process.env.NEXT_PUBLIC_EMAIL_LOGIN,
+        pass: process.env.NEXT_PUBLIC_EMAIL_PASSWORD,
       },
     })
 
     await transporter.sendMail({
-      from: '"Fred Foo 👻" <foo@example.com>', // sender address
-      to: 'bar@example.com, baz@example.com', // list of receivers
+      from: 'purplequeenband@gmail.com',
+      to: 'sonego.bruno@gmail.com', // list of receivers
       subject: 'Hello ✔', // Subject line
       text: 'Hello world?', // plain text body
-      html: '<b>Hello world?</b>', // html body
+      html: `<div><p>Nome: ${body.name}</p> <p>Email: ${body.email}</p> <p>Mensagem: ${body.message}</p></div>`,
     })
 
     return NextResponse.json(
