@@ -7,6 +7,7 @@ import { z } from 'zod'
 import { api } from '@/services/api'
 import { errorHandler } from '@/errors/errorHandler'
 import { useState } from 'react'
+import { useToast } from '@/hooks/useToast'
 
 const schema = z
   .object({
@@ -25,19 +26,33 @@ export function Contact() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormValues>({
     resolver: zodResolver(schema),
   })
 
   const [isLoading, setIsLoading] = useState(false)
+  const { showToast } = useToast()
 
   async function onSubmit(data: FormValues) {
     setIsLoading(true)
     try {
       await api.post('send-email', data)
+
+      showToast({
+        type: 'success',
+        description:
+          'Recebemos a sua mensagem, agora aguarde que logo entraremos em contato',
+      })
+      reset()
     } catch (error) {
-      errorHandler(error, 'send a email')
+      const message = errorHandler(error, 'send a email')
+
+      showToast({
+        type: 'error',
+        description: message.message,
+      })
     } finally {
       setIsLoading(false)
     }
