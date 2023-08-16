@@ -5,6 +5,7 @@ import { Roboto_Slab } from 'next/font/google'
 import { twMerge } from 'tailwind-merge'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
+import { AppProviders } from '@/hooks'
 
 const robotoSlab = Roboto_Slab({ subsets: ['latin'] })
 
@@ -29,10 +30,12 @@ export default function RootLayout({
           'text-light h-screen max-w-[100vw] bg-dark',
         )}
       >
-        <Header />
-        {children}
-        <Footer />
-        <div className="background-image"></div>
+        <AppProviders>
+          <Header />
+          {children}
+          <Footer />
+          <div className="background-image"></div>
+        </AppProviders>
       </body>
     </html>
   )
