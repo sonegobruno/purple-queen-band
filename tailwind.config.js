@@ -9,6 +9,9 @@ module.exports = {
         dark: '#0C0014',
         'dark-tiny': '#1A0F21',
         alert: '#F86969',
+        warning: '#8C6B06',
+        info: '#2E67C2',
+        success: '#157A3A',
       },
       boxShadow: {
         primary: '0px 0px 20px -1px rgba(73, 28, 163, 0.3)',
