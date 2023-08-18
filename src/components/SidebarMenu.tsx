@@ -4,16 +4,22 @@ import { Calendar, Guitar, House, List, Phone, X } from '@phosphor-icons/react'
 import { Anchor } from './Anchor'
 import { usePathname } from 'next/navigation'
 import { ButtonVariant } from '@/utils/buttonVariants'
+import { useEffect, useState } from 'react'
 
 export function SidebarMenu() {
+  const [open, setOpen] = useState(false)
   const pathname = usePathname()
+
+  useEffect(() => {
+    setOpen(false)
+  }, [pathname])
 
   function getVariantByUrl(url: string): ButtonVariant {
     return url === pathname ? 'primary' : 'ghost'
   }
 
   return (
-    <Dialog.Root>
+    <Dialog.Root open={open} onOpenChange={setOpen}>
       <Button variant="ghost" className="md:hidden">
         <Dialog.Trigger asChild>
           <List size={24} className="text-light" />
