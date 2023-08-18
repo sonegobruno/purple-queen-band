@@ -14,7 +14,9 @@ module.exports = {
         success: '#157A3A',
       },
       boxShadow: {
-        primary: '0px 0px 20px -1px rgba(73, 28, 163, 0.3)',
+        primary: '0px 0px 20px -1px rgba(73, 28, 163)',
+        'primary-sm': '0px 0px 10px -1px rgba(73, 28, 163)',
+        green: '0px 0px 10px -1px rgb(1, 171, 107)',
         dark: '0px 0px 10px -1px #1A0F2103',
         alert: '0px 0px 20px -1px rgba(248, 105, 105, 0.3)',
       },

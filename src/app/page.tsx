@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <About />
+      <About className="bg-dark" />
       <Galery />
       <Contact />
     </main>
