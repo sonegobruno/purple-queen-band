@@ -1,4 +1,4 @@
-import './globals.css'
+import '@/styles/globals.css'
 import type { Metadata } from 'next'
 // eslint-disable-next-line camelcase
 import { Roboto_Slab } from 'next/font/google'
