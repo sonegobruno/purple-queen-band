@@ -1,5 +1,5 @@
 'use client'
-import { Anchor } from '@/components/Anchor'
+import { Anchor } from '@/components'
 import { Guitar } from '@phosphor-icons/react'
 
 export function Hero() {

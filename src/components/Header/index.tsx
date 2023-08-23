@@ -7,9 +7,7 @@ import {
 } from '@phosphor-icons/react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { LinkButton } from './LinkButton'
-import { LinkIcon } from './LinkIcon'
-import { SidebarMenu } from './SidebarMenu'
+import { LinkIcon, SidebarMenu, LinkButton } from '@/components'
 
 export function Header() {
   return (

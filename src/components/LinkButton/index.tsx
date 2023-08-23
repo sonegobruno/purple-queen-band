@@ -1,29 +1,16 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { useMemo } from 'react'
 import { twMerge } from 'tailwind-merge'
+import { useLinkButton } from './hooks/useLinkButton'
 
 interface Props {
   href: string
   children: React.ReactNode
 }
 
-const ACTIVE_STYLE = 'text-primary border-primary'
-
 export function LinkButton({ href, children }: Props) {
-  const pathname = usePathname()
-
-  const statusStyle = useMemo(() => {
-    let styles = ''
-
-    if (pathname === href) {
-      styles += ` ${ACTIVE_STYLE}`
-    }
-
-    return styles
-  }, [pathname, href])
+  const { statusStyle } = useLinkButton(href)
 
   return (
     <Link

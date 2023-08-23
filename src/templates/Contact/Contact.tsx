@@ -1,6 +1,5 @@
 'use client'
-import { Button } from '@/components/Button'
-import { Form } from '@/components/Form'
+import { Button, Form } from '@/components'
 import { useContact } from './hooks/useContact'
 
 export function Contact() {

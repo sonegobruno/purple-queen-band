@@ -5,7 +5,7 @@ import {
   EnvelopeSimple,
   WhatsappLogo,
 } from '@phosphor-icons/react'
-import { LinkIcon } from './LinkIcon'
+import { LinkIcon } from '@/components'
 
 export function Footer() {
   return (

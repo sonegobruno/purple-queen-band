@@ -1,22 +1,11 @@
+'use client'
 import * as Dialog from '@radix-ui/react-dialog'
-import { Button } from './Button'
+import { Button, Anchor } from '@/components'
 import { Calendar, Guitar, House, List, Phone, X } from '@phosphor-icons/react'
-import { Anchor } from './Anchor'
-import { usePathname } from 'next/navigation'
-import { ButtonVariant } from '@/utils/buttonVariants'
-import { useEffect, useState } from 'react'
+import { useSideBarMenu } from './hooks/useSideBarMenu'
 
 export function SidebarMenu() {
-  const [open, setOpen] = useState(false)
-  const pathname = usePathname()
-
-  useEffect(() => {
-    setOpen(false)
-  }, [pathname])
-
-  function getVariantByUrl(url: string): ButtonVariant {
-    return url === pathname ? 'primary' : 'ghost'
-  }
+  const { open, setOpen, getVariantByUrl } = useSideBarMenu()
 
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
