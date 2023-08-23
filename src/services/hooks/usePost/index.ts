@@ -1,6 +1,6 @@
 import { useMemo, useCallback, useReducer } from 'react'
 /* eslint-disable no-case-declarations */
-import { api } from '@/services/api'
+import { api } from '@/services'
 
 enum ActionType {
   READY,

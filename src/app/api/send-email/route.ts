@@ -1,12 +1,12 @@
-import { UNEXPECT_ERROR_MESSAGE } from '@/constants'
+import {
+  UNEXPECT_ERROR_MESSAGE,
+  errorResponse,
+  HttpResponseStatus,
+  successResponse,
+} from '@/constants'
 import { SendEmailDTO } from '@/api/sendEmail/dto'
 import { sendMailUseCase } from '@/api/sendEmail/useCase'
-import {
-  errorResponse,
-  HttpStatus,
-  successResponse,
-} from '@/constants/apiReponses'
-import { ExpectedError } from '@/errors/ExpectedError'
+import { ExpectedError } from '@/errors'
 
 export async function POST(request: Request) {
   const body: SendEmailDTO = await request.json()
@@ -27,7 +27,7 @@ export async function POST(request: Request) {
 
     return errorResponse(
       { message: UNEXPECT_ERROR_MESSAGE },
-      HttpStatus.INTERNAL_SERVER_ERROR,
+      HttpResponseStatus.INTERNAL_SERVER_ERROR,
     )
   }
 }

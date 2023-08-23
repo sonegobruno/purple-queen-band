@@ -7,17 +7,17 @@ type SendEmail = {
   message: string
 }
 
-const TRANSPORTER = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 587,
-  secure: false,
-  auth: {
-    user: process.env.NEXT_PUBLIC_EMAIL_LOGIN,
-    pass: process.env.NEXT_PUBLIC_EMAIL_PASSWORD,
-  },
-})
-
 export async function sendEmail(data: SendEmail) {
+  const TRANSPORTER = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
+    auth: {
+      user: process.env.NEXT_PUBLIC_EMAIL_LOGIN,
+      pass: process.env.NEXT_PUBLIC_EMAIL_PASSWORD,
+    },
+  })
+
   await TRANSPORTER.sendMail({
     from: 'purplequeenband@gmail.com',
     to: 'sonego.bruno@gmail.com', // list of receivers

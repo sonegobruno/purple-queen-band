@@ -1,5 +1,5 @@
 import { useToast } from '@/contexts/toast'
-import { errorHandler } from '@/errors/errorHandler'
+import { errorHandler } from '@/errors'
 import { usePost } from '@/services/hooks'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'

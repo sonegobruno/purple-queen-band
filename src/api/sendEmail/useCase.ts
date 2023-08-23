@@ -1,19 +1,19 @@
-import { InvalidInputExeption } from './../../errors/InvalidInputException'
-import { sendEmail } from '@/services/sendMail'
 import { SendEmailDTO } from './dto'
-import { isEmpty } from '@/utils/isEmpy'
+import { isEmpty } from '@/utils'
+import { InvalidInputException } from '@/errors'
+import { sendEmail } from '../services/sendEmail'
 
 export async function sendMailUseCase(data: SendEmailDTO) {
   if (isEmpty(data.name)) {
-    throw new InvalidInputExeption('Campo nome é obrigatório')
+    throw new InvalidInputException('Campo nome é obrigatório')
   }
 
   if (isEmpty(data.email)) {
-    throw new InvalidInputExeption('Campo email é obrigatório')
+    throw new InvalidInputException('Campo email é obrigatório')
   }
 
   if (isEmpty(data.message)) {
-    throw new InvalidInputExeption('Campo mensagem é obrigatório')
+    throw new InvalidInputException('Campo mensagem é obrigatório')
   }
 
   await sendEmail(data)

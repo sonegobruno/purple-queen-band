@@ -1,5 +1,5 @@
 import { UNEXPECT_ERROR_MESSAGE } from '@/constants'
-import { FriendlyError } from '@/errors/FriendlyError'
+import { FriendlyError } from '@/errors'
 import axios, { AxiosError } from 'axios'
 
 export const api = axios.create({
