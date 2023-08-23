@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { ToastProvider } from './useToast'
+import { ToastProvider } from './toast'
 
 interface Props {
   children: ReactNode

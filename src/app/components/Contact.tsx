@@ -7,7 +7,7 @@ import { z } from 'zod'
 import { api } from '@/services/api'
 import { errorHandler } from '@/errors/errorHandler'
 import { useState } from 'react'
-import { useToast } from '@/hooks/useToast'
+import { useToast } from '@/contexts/hooks'
 
 const schema = z
   .object({

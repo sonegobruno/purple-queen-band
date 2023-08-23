@@ -5,7 +5,7 @@ import { Roboto_Slab } from 'next/font/google'
 import { twMerge } from 'tailwind-merge'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
-import { AppProviders } from '@/hooks'
+import { AppProviders } from '@/contexts'
 
 const robotoSlab = Roboto_Slab({ subsets: ['latin'] })
 
