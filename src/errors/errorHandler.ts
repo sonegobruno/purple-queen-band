@@ -1,4 +1,4 @@
-import { UNEXPECT_ERROR_MESSAGE } from '@/constants/errorMessage'
+import { UNEXPECT_ERROR_MESSAGE } from '@/constants'
 import { FriendlyError } from './FriendlyError'
 
 type Error = {

@@ -10,7 +10,7 @@ import {
   useState,
 } from 'react'
 import * as ToastRadix from '@radix-ui/react-toast'
-import { assertType, isTruthy } from '@/utils'
+import { assertType, isTruthy } from '@/types'
 import { tv } from 'tailwind-variants'
 import {
   CheckCircle,
