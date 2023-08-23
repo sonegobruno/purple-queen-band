@@ -1,5 +1,5 @@
 import { ReactNode, HTMLAttributes } from 'react'
-import { ButtonVariant, buttonVariants } from '@/utils/buttonVariants'
+import { ButtonVariant, buttonVariants } from '@/utils'
 import { Spinner } from '@/components'
 
 interface Props extends HTMLAttributes<HTMLButtonElement> {

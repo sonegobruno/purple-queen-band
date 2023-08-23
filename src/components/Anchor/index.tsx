@@ -1,4 +1,4 @@
-import { ButtonVariant, buttonVariants } from '@/utils/buttonVariants'
+import { ButtonVariant, buttonVariants } from '@/utils'
 import Link from 'next/link'
 import { ReactNode, ComponentProps } from 'react'
 
