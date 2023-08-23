@@ -1,15 +1,5 @@
-import { About } from './components/About'
-import { Contact } from './components/Contact'
-import { Galery } from './components/Galery'
-import { Hero } from './components/Hero'
+import { Home } from '@/templates/Home'
 
-export default function Home() {
-  return (
-    <main>
-      <Hero />
-      <About className="bg-dark" />
-      <Galery />
-      <Contact />
-    </main>
-  )
+export default function HomePage() {
+  return <Home />
 }

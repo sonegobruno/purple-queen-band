@@ -1,62 +1,10 @@
 'use client'
 import { Button } from '@/components/Button'
 import { Form } from '@/components/Form'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
-import { api } from '@/services/api'
-import { errorHandler } from '@/errors/errorHandler'
-import { useState } from 'react'
-import { useToast } from '@/contexts/hooks'
-
-const schema = z
-  .object({
-    name: z.string().nonempty('Nome é obrigatório'),
-    email: z
-      .string()
-      .email({ message: 'Email inválido' })
-      .nonempty('Email é obrigatório'),
-    message: z.string().nonempty('Mensagem é obrigatório'),
-  })
-  .required()
-
-type FormValues = z.infer<typeof schema>
+import { useContact } from './hooks/useContact'
 
 export function Contact() {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm<FormValues>({
-    resolver: zodResolver(schema),
-  })
-
-  const [isLoading, setIsLoading] = useState(false)
-  const { showToast } = useToast()
-
-  async function onSubmit(data: FormValues) {
-    setIsLoading(true)
-    try {
-      await api.post('send-email', data)
-
-      showToast({
-        type: 'success',
-        description:
-          'Recebemos a sua mensagem, agora aguarde que logo entraremos em contato',
-      })
-      reset()
-    } catch (error) {
-      const message = errorHandler(error, 'send a email')
-
-      showToast({
-        type: 'error',
-        description: message.message,
-      })
-    } finally {
-      setIsLoading(false)
-    }
-  }
+  const { register, errors, handleSubmit, onSubmit, isLoading } = useContact()
 
   return (
     <section className="h-screen w-full p-8">
