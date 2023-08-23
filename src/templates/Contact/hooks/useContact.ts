@@ -1,8 +1,7 @@
 import { useToast } from '@/contexts/toast'
 import { errorHandler } from '@/errors/errorHandler'
-import { api } from '@/services/api'
+import { usePost } from '@/services/hooks'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { schema } from '../schemas'
 import { FormValues } from '../types'
@@ -17,13 +16,13 @@ export function useContact() {
     resolver: zodResolver(schema),
   })
 
-  const [isLoading, setIsLoading] = useState(false)
+  const { handler, isLoading } = usePost()
+
   const { showToast } = useToast()
 
   async function onSubmit(data: FormValues) {
-    setIsLoading(true)
     try {
-      await api.post('send-email', data)
+      await handler('send-email', data)
 
       showToast({
         type: 'success',
@@ -38,8 +37,6 @@ export function useContact() {
         type: 'error',
         description: message.message,
       })
-    } finally {
-      setIsLoading(false)
     }
   }
 
