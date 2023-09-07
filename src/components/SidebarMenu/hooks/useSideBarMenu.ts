@@ -1,5 +1,5 @@
 'use client'
-import { ButtonVariant } from '@/utils'
+import { ButtonVariant } from '@/types'
 import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
 
