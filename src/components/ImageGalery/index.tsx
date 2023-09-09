@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { HTMLAttributes, useState } from 'react'
 import Lightbox, { SlideImage } from 'yet-another-react-lightbox'
 import Counter from 'yet-another-react-lightbox/plugins/counter'
 import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
@@ -7,85 +7,54 @@ import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
 import 'yet-another-react-lightbox/styles.css'
 import 'yet-another-react-lightbox/plugins/counter.css'
 import 'yet-another-react-lightbox/plugins/thumbnails.css'
-
-const images: SlideImage[] = [
-  {
-    src: '/galery/image-01.jpeg',
-    width: 300,
-  },
-  {
-    src: '/galery/image-02.jpg',
-    width: 300,
-  },
-  {
-    src: '/galery/image-03.jpg',
-    width: 300,
-  },
-  {
-    src: '/galery/image-04.jpg',
-    width: 300,
-  },
-  {
-    src: '/galery/image-05.jpg',
-    width: 300,
-  },
-  {
-    src: '/galery/image-06.jpg',
-    width: 300,
-  },
-]
+import { lightboxStyles } from '@/constants'
+import { twMerge } from 'tailwind-merge'
 
 const CLOSED_LIGHTHOUSE_VALUE = -1
 
-export function ImageGalery() {
+interface Props extends HTMLAttributes<HTMLDivElement> {
+  images: SlideImage[]
+}
+
+export function ImageGalery({ images, className, ...rest }: Props) {
   const [index, setIndex] = useState(CLOSED_LIGHTHOUSE_VALUE)
 
   return (
-    <div className="mt-4 flex items-center justify-center gap-2 overflow-auto p-x-4">
+    <div
+      className={twMerge(
+        'carrousel md:grid-flow-row md:grid-cols-4 gap-3 pr-8 md:pr-0',
+        className,
+      )}
+      {...rest}
+    >
       {images.map((image, index) => (
         <button
           key={image.src}
           type="button"
           onClick={() => setIndex(index)}
-          className="min-w-[200px]"
+          className="transition-all hover:opacity-75 min-w-[300px] snap-start"
         >
-          <img src={image.src} alt="" />
+          <img src={image.src} alt="" className="rounded" />
         </button>
       ))}
-
       <Lightbox
         index={index}
         open={index !== CLOSED_LIGHTHOUSE_VALUE}
         close={() => setIndex(CLOSED_LIGHTHOUSE_VALUE)}
         slides={images}
         styles={{
-          icon: {
-            color: '#F4F4EF',
-            width: 24,
-          },
-          container: {
-            background: '#0c0014c7',
-            fontSize: '14px',
-          },
-          thumbnailsContainer: { background: '#0c0014c7' },
-          thumbnail: { background: '#1A0F21' },
+          icon: lightboxStyles.icon,
+          container: lightboxStyles.container,
+          thumbnailsContainer: lightboxStyles.thumbnailContainer,
+          thumbnail: lightboxStyles.thumbnailBackground,
         }}
         plugins={[Counter, Thumbnails]}
         counter={{
           container: {
-            style: { top: 'unset', bottom: 0, right: 0, textAlign: 'right' },
+            style: lightboxStyles.counterContainer,
           },
         }}
-        thumbnails={{
-          position: 'bottom',
-          width: 120,
-          height: 80,
-          border: 0,
-          borderRadius: 4,
-          gap: 8,
-          showToggle: false,
-          imageFit: 'cover',
-        }}
+        thumbnails={lightboxStyles.thumbnails}
       />
     </div>
   )

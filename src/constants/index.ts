@@ -5,3 +5,4 @@ export {
   errorResponse,
   successResponse,
 } from './apiReponses'
+export { lightboxStyles } from './lightboxStyles'

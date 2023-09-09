@@ -21,3 +21,17 @@
         background-image: url('/background-two.png');
     }
 }
+
+.carrousel {
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.carrousel::-webkit-scrollbar {
+    display: none;
+}
