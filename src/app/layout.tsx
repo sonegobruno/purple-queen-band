@@ -31,9 +31,9 @@ export default function RootLayout({
           'text-light h-screen max-w-[100vw] bg-dark',
         )}
       >
+        <Suspense fallback={<Loading />} />
         <AppProviders>
           <Header />
-          <Suspense fallback={<Loading />} />
           {children}
           <Footer />
           <div className="background-image"></div>
