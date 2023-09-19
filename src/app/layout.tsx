@@ -5,6 +5,8 @@ import { Roboto_Slab } from 'next/font/google'
 import { twMerge } from 'tailwind-merge'
 import { Header, Footer } from '@/components'
 import { AppProviders } from '@/contexts'
+import { Suspense } from 'react'
+import Loading from './loading'
 
 const robotoSlab = Roboto_Slab({ subsets: ['latin'] })
 
@@ -31,6 +33,7 @@ export default function RootLayout({
       >
         <AppProviders>
           <Header />
+          <Suspense fallback={<Loading />} />
           {children}
           <Footer />
           <div className="background-image"></div>
