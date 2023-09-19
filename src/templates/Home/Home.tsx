@@ -9,7 +9,7 @@ export function Home() {
     <main>
       <Hero />
       <About className="bg-dark" />
-      <Galery images={previewImageGaleryList} />
+      <Galery images={previewImageGaleryList} isPreview />
       <Contact />
     </main>
   )
