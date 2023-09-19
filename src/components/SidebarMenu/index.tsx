@@ -43,8 +43,8 @@ export function SidebarMenu() {
               Sobre a banda
             </Anchor>
             <Anchor
-              href="/schedule"
-              variant={getVariantByUrl('/schedule')}
+              href="/galery"
+              variant={getVariantByUrl('/galery')}
               className="justify-start"
             >
               <Images size={18} />
