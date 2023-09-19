@@ -10,6 +10,7 @@ import 'yet-another-react-lightbox/plugins/thumbnails.css'
 import { lightboxStyles } from '@/constants'
 import { twMerge } from 'tailwind-merge'
 import { ImageGaleryProperty } from '@/types'
+import { Camera } from '@phosphor-icons/react'
 
 const CLOSED_LIGHTHOUSE_VALUE = -1
 
@@ -33,8 +34,11 @@ export function ImageGalery({ images, className, ...rest }: Props) {
           key={image.src}
           type="button"
           onClick={() => setIndex(index)}
-          className="transition-all hover:opacity-75 min-w-[300px] snap-start"
+          className="transition-all hover:opacity-75 focus:opacity-75 min-w-[300px] snap-start relative group"
         >
+          <div className="absolute inset-0 hidden transition-all group-hover:flex group-focus:flex items-center justify-center">
+            <Camera size={48} />
+          </div>
           <img src={image.src} alt="" className="rounded" />
         </button>
       ))}
