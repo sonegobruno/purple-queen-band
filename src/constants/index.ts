@@ -6,3 +6,4 @@ export {
   successResponse,
 } from './apiReponses'
 export { lightboxStyles } from './lightboxStyles'
+export { imageGaleryList, previewImageGaleryList } from './image-galery'

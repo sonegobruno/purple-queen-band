@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, useState } from 'react'
-import Lightbox, { SlideImage } from 'yet-another-react-lightbox'
+import Lightbox from 'yet-another-react-lightbox'
 import Counter from 'yet-another-react-lightbox/plugins/counter'
 import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
 
@@ -9,11 +9,12 @@ import 'yet-another-react-lightbox/plugins/counter.css'
 import 'yet-another-react-lightbox/plugins/thumbnails.css'
 import { lightboxStyles } from '@/constants'
 import { twMerge } from 'tailwind-merge'
+import { ImageGaleryProperty } from '@/types'
 
 const CLOSED_LIGHTHOUSE_VALUE = -1
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
-  images: SlideImage[]
+  images: ImageGaleryProperty[]
 }
 
 export function ImageGalery({ images, className, ...rest }: Props) {

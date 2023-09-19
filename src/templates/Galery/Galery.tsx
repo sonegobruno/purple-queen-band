@@ -1,33 +1,11 @@
 import { ImageGalery } from '@/components'
+import { ImageGaleryProperty } from '@/types'
 
-const images = [
-  {
-    src: '/galery/image-01.jpeg',
-    width: 500,
-  },
-  {
-    src: '/galery/image-02.jpg',
-    width: 500,
-  },
-  {
-    src: '/galery/image-03.jpg',
-    width: 500,
-  },
-  {
-    src: '/galery/image-04.jpg',
-    width: 500,
-  },
-  {
-    src: '/galery/image-05.jpg',
-    width: 500,
-  },
-  {
-    src: '/galery/image-06.jpg',
-    width: 500,
-  },
-]
+interface Props {
+  images: ImageGaleryProperty[]
+}
 
-export function Galery() {
+export function Galery({ images }: Props) {
   return (
     <section className="min-h-screen w-full py-8 pl-8 md:p-8">
       <div className="container mx-auto">

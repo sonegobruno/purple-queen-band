@@ -1,3 +1,4 @@
+import { previewImageGaleryList } from '@/constants'
 import { About } from '../About'
 import { Contact } from '../Contact'
 import { Galery } from '../Galery'
@@ -8,7 +9,7 @@ export function Home() {
     <main>
       <Hero />
       <About className="bg-dark" />
-      <Galery />
+      <Galery images={previewImageGaleryList} />
       <Contact />
     </main>
   )
