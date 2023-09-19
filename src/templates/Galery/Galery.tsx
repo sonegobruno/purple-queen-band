@@ -1,6 +1,7 @@
 'use client'
 
-import { Anchor, ImageGalery } from '@/components'
+import { Anchor, ImageGalery, VideoGalery } from '@/components'
+import { videoGalery } from '@/constants'
 import { ImageGaleryProperty } from '@/types'
 import { Images } from '@phosphor-icons/react'
 
@@ -17,6 +18,9 @@ export function Galery({ images, isPreview = false }: Props) {
 
         <h3 className="text-xl mt-4">Fotos</h3>
         <ImageGalery images={images} className="mt-3" />
+
+        <h3 className="text-xl mt-4">Videos</h3>
+        <VideoGalery videos={videoGalery} className="mt-3" />
 
         {isPreview && (
           <Anchor href="galery" className="mt-8 max-w-[300px] mx-auto">
