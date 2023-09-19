@@ -25,7 +25,7 @@ export function Header() {
       <nav className="hidden md:flex gap-3 items-center">
         <LinkButton href="/">Início</LinkButton>
         <LinkButton href="/about">Sobre a banda</LinkButton>
-        <LinkButton href="/schedule">Agenda</LinkButton>
+        <LinkButton href="/galery">Galeria</LinkButton>
         <LinkButton href="contact">Contato para shows</LinkButton>
       </nav>
 

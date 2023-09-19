@@ -1,7 +1,7 @@
 'use client'
 import * as Dialog from '@radix-ui/react-dialog'
 import { Button, Anchor } from '@/components'
-import { Calendar, Guitar, House, List, Phone, X } from '@phosphor-icons/react'
+import { Guitar, House, Image, List, Phone, X } from '@phosphor-icons/react'
 import { useSideBarMenu } from './hooks/useSideBarMenu'
 
 export function SidebarMenu() {
@@ -47,8 +47,8 @@ export function SidebarMenu() {
               variant={getVariantByUrl('/schedule')}
               className="justify-start"
             >
-              <Calendar size={18} />
-              Agenda
+              <Image size={18} />
+              Galeria
             </Anchor>
             <Anchor
               href="/contact"
