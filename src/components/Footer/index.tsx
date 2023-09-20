@@ -1,11 +1,11 @@
 'use client'
 import {
   InstagramLogo,
-  Phone,
   EnvelopeSimple,
   WhatsappLogo,
 } from '@phosphor-icons/react'
 import { LinkIcon } from '@/components'
+import { INSTALGRAM_URL, MAIL_URL, WHATSAPP_URL } from '@/constants'
 
 export function Footer() {
   return (
@@ -18,32 +18,28 @@ export function Footer() {
         <p className="text-center text-xs">Tel: (35) 98439-6313</p>
         <nav className="flex items-center justify-center gap-2 mt-2">
           <LinkIcon
-            href="https://www.instagram.com/purplequeenband"
+            href={INSTALGRAM_URL}
             icon={InstagramLogo}
             iconConfig={{
               weight: 'bold',
             }}
+            target="_blank"
           />
           <LinkIcon
-            href="https://wa.me/5535984396313"
+            href={WHATSAPP_URL}
             icon={WhatsappLogo}
             iconConfig={{
               weight: 'bold',
             }}
+            target="_blank"
           />
           <LinkIcon
-            href="mailto:purplequeenband@gmail.com"
+            href={MAIL_URL}
             icon={EnvelopeSimple}
             iconConfig={{
               weight: 'bold',
             }}
-          />
-          <LinkIcon
-            href="tel:35984396313"
-            icon={Phone}
-            iconConfig={{
-              weight: 'bold',
-            }}
+            target="_blank"
           />
         </nav>
       </div>

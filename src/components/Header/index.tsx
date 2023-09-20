@@ -2,12 +2,12 @@
 import {
   EnvelopeSimple,
   InstagramLogo,
-  Phone,
   WhatsappLogo,
 } from '@phosphor-icons/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { LinkIcon, SidebarMenu, LinkButton } from '@/components'
+import { INSTALGRAM_URL, MAIL_URL, WHATSAPP_URL } from '@/constants'
 
 export function Header() {
   return (
@@ -31,27 +31,29 @@ export function Header() {
 
       <nav className="hidden md:flex gap items-center">
         <LinkIcon
-          href="https://www.instagram.com/purplequeenband"
+          href={INSTALGRAM_URL}
           icon={InstagramLogo}
           iconConfig={{
             weight: 'bold',
           }}
+          target="_blank"
         />
         <LinkIcon
-          href="https://wa.me/5535984396313"
+          href={WHATSAPP_URL}
           icon={WhatsappLogo}
           iconConfig={{
             weight: 'bold',
           }}
+          target="_blank"
         />
         <LinkIcon
-          href="mailto:purplequeenband@gmail.com"
+          href={MAIL_URL}
           icon={EnvelopeSimple}
           iconConfig={{
             weight: 'bold',
           }}
+          target="_blank"
         />
-        <LinkIcon href="tel:35984396313" icon={Phone} />
       </nav>
     </header>
   )
