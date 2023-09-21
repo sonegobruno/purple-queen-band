@@ -10,8 +10,8 @@ export function Hero() {
           Banda Purple Queen
         </h1>
         <p className="text-xs md:text-md mt-2 text-center">
-          Banda de Rock localizada no sul de Minas Gerais <br />
-          que irá te trazer uma experiência Rock n&apos; Roll única.
+          Banda de Rock diretamente do sul de Minas Gerais <br />
+          Uma experiência Rock n&apos; Roll única pro seu evento
         </p>
         <Anchor href="contact" className="mt-4">
           Agende o seu show <Guitar weight="fill" />
