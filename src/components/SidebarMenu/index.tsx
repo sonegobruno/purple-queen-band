@@ -9,7 +9,11 @@ export function SidebarMenu() {
 
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
-      <Button variant="ghost" className="md:hidden">
+      <Button
+        aria-label="Menu de navegação"
+        variant="ghost"
+        className="md:hidden"
+      >
         <Dialog.Trigger asChild>
           <List size={24} className="text-light" />
         </Dialog.Trigger>

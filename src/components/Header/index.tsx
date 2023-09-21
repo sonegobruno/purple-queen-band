@@ -15,6 +15,7 @@ export function Header() {
       <SidebarMenu />
 
       <Link
+        aria-label="Acessar páginar inicial"
         href="/"
         tabIndex={-1}
         className="relative w-[56px] h-[40px] md:w-[72px] md:h-[56px]"
@@ -31,6 +32,7 @@ export function Header() {
 
       <nav className="hidden md:flex gap items-center">
         <LinkIcon
+          aria-label="Acessar instagram da banda"
           href={INSTALGRAM_URL}
           icon={InstagramLogo}
           iconConfig={{
@@ -39,6 +41,7 @@ export function Header() {
           target="_blank"
         />
         <LinkIcon
+          aria-label="Acessar whatsapp da banda"
           href={WHATSAPP_URL}
           icon={WhatsappLogo}
           iconConfig={{
@@ -47,6 +50,7 @@ export function Header() {
           target="_blank"
         />
         <LinkIcon
+          aria-label="Enviar email para a banda"
           href={MAIL_URL}
           icon={EnvelopeSimple}
           iconConfig={{

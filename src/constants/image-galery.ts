@@ -2,27 +2,27 @@ import { ImageGaleryProperty } from '@/types'
 
 export const previewImageGaleryList: ImageGaleryProperty[] = [
   {
-    src: '/galery/image-01.jpg',
+    src: '/galery/image-01.webp',
     width: 500,
   },
   {
-    src: '/galery/image-02.jpg',
+    src: '/galery/image-02.webp',
     width: 500,
   },
   {
-    src: '/galery/image-03.jpg',
+    src: '/galery/image-03.webp',
     width: 500,
   },
   {
-    src: '/galery/image-04.jpg',
+    src: '/galery/image-04.webp',
     width: 500,
   },
   {
-    src: '/galery/image-05.jpg',
+    src: '/galery/image-05.webp',
     width: 500,
   },
   {
-    src: '/galery/image-06.jpg',
+    src: '/galery/image-06.webp',
     width: 500,
   },
   {

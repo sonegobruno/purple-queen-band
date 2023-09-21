@@ -10,7 +10,7 @@
     position: fixed;
     inset: 0;
     opacity: 0.25;
-    background-image: url('/background-one.png');
+    background-image: url('/background-web.webp');
     background-position: top center;
     background-size: cover;
     z-index: -900;
@@ -18,7 +18,7 @@
 
 @media (max-width: 769px) {
     .background-image {
-        background-image: url('/background-two.png');
+        background-image: url('/background-mobile.webp');
     }
 }
 

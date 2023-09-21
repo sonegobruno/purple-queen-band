@@ -24,22 +24,23 @@ export function ImageGalery({ images, className, ...rest }: Props) {
   return (
     <div
       className={twMerge(
-        'carrousel md:grid-flow-row md:grid-cols-4 gap-3 pr-8 md:pr-0',
+        'carrousel md:grid-flow-row md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 pr-8 md:pr-0',
         className,
       )}
       {...rest}
     >
       {images.map((image, index) => (
         <button
+          aria-label="Acessar imagem em tamanho grande"
           key={image.src}
           type="button"
           onClick={() => setIndex(index)}
-          className="transition-all hover:opacity-75 focus:opacity-75 min-w-[300px] snap-start relative group"
+          className="transition-all hover:opacity-75 focus:opacity-75 min-w-[280px] snap-start relative group"
         >
           <div className="absolute inset-0 hidden transition-all group-hover:flex group-focus:flex items-center justify-center">
             <Camera size={48} />
           </div>
-          <img src={image.src} alt="" className="rounded" />
+          <img src={image.src} alt="" className="rounded w-full h-full" />
         </button>
       ))}
       <Lightbox
