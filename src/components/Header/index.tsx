@@ -18,7 +18,7 @@ export function Header() {
         aria-label="Acessar páginar inicial"
         href="/"
         tabIndex={-1}
-        className="relative w-[56px] h-[40px] md:w-[72px] md:h-[56px]"
+        className="relative w-[72px] h-[56px] md:w-[88px] md:h-[72px]"
       >
         <Image src="/logo.svg" alt="Logo da banda Purple Queen" fill />
       </Link>

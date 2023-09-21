@@ -25,5 +25,6 @@ export function generateMetadata(firstTitle: string): Metadata {
     },
     keywords:
       'banda de rock, banda Purple Queen, banda de clássicos do rock, banda de classic rock, banda no Sul de Minas, banda de rock no Sul de Minas, banda de Rock em Minas Gerais',
+    authors: [{ name: 'Bruno Sônego', url: 'https://github.com/sonegobruno' }],
   }
 }
