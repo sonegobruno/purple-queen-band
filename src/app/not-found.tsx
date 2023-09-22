@@ -4,7 +4,7 @@ import { House } from '@phosphor-icons/react'
 
 export default function NotFound() {
   return (
-    <main className="w-full h-screen bg-dark flex flex-col items-center justify-center">
+    <main className="w-full h-screen bg-dark-tiny flex flex-col items-center justify-center">
       <strong className="text-light text-lg text-center">
         Não encontramos a página solicitada,
         <br />
