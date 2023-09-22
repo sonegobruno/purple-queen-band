@@ -11,7 +11,7 @@ export function About({ className, ...rest }: Props) {
         <h2 className="text-2xl text-center">Sobre nós</h2>
 
         <Article
-          urlImage="/about-us-01.jpg"
+          urlImage="/about-us-01.webp"
           description={`O tempo passa e a forma de nos interagir com o mundo e com as
             pessoas também muda. Muitas coisas sobrevivem a tais variações e é
             isso que a Purple Queen busca nesse projeto. Partindo de uma amizade
@@ -21,7 +21,7 @@ export function About({ className, ...rest }: Props) {
         />
 
         <Article
-          urlImage="/about-us-02.jpeg"
+          urlImage="/about-us-02.webp"
           description={`O projeto conta com um repertório que navega por diversas e variadas
           fases do Rock, relembrando grandes clássicos dos anos 70, 80 e 90
           que continuam a fazer sucesso até os dias de hoje.`}

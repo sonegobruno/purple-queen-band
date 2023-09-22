@@ -26,11 +26,11 @@ export const previewImageGaleryList: ImageGaleryProperty[] = [
     width: 500,
   },
   {
-    src: '/galery/image-07.jpg',
+    src: '/galery/image-07.webp',
     width: 500,
   },
   {
-    src: '/galery/image-08.jpg',
+    src: '/galery/image-08.webp',
     width: 500,
   },
 ]
@@ -38,15 +38,15 @@ export const previewImageGaleryList: ImageGaleryProperty[] = [
 export const imageGaleryList: ImageGaleryProperty[] = [
   ...previewImageGaleryList,
   {
-    src: '/galery/image-09.jpg',
+    src: '/galery/image-09.webp',
     width: 500,
   },
   {
-    src: '/galery/image-10.jpg',
+    src: '/galery/image-10.webp',
     width: 500,
   },
   {
-    src: '/galery/image-11.jpg',
+    src: '/galery/image-11.webp',
     width: 500,
   },
 ]
